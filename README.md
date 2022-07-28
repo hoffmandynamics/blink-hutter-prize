@@ -1,5 +1,5 @@
 # blink-hutter-prize
-A Hutter Prize submission using 'Blink', our selective non-commutative ∆ algebra
+A Hutter Prize submission using 'blink', our selective non-commutative ∆ (triangle) algebra
 
 ```
 ∆ Compression
