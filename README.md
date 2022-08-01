@@ -6,14 +6,14 @@ A Hutter Prize submission using 'blink', our selective non-commutative ∆ (tria
 ```
 Informally: ∆ compression
 
-enwik9_char_size : uncompressed     : compressed : compression : run_time                          :  improvement
------------------------------------------------------------------------------------------------------------------
-10        chars  : 10         bytes : 19  bytes  : ~ 189.99%   :                           42.40µs : N           
-100       chars  : 100        bytes : 21  bytes  : ~ 79.00%    :                    1.26ms         : N           
-1000      chars  : 1000       bytes : 383 bytes  : ~ 61.70%    :                  103.00ms         : N           
-10000     chars  : 10002      bytes : 13  bytes  : ~ 99.87%    :           10.50s                  : Y           
-100000    chars  : 100115     btyes : 149 bytes  : ~ 99.85%    :       15m 55.00s                  : Y           
-1000000   chars  :                  :            : ~ 99.99%    : 1d 4h 46m 5s                      : Y           
+enwik9_char_size : uncompressed     : compressed : compression : run_time                          
+---------------------------------------------------------------------------------------------------
+10        chars  : 10         bytes : 19  bytes  : ~ -89.99%   :                           42.40µs 
+100       chars  : 100        bytes : 21  bytes  : ~ 79.00%    :                    1.26ms         
+1000      chars  : 1000       bytes : 383 bytes  : ~ 61.70%    :                  103.00ms         
+10000     chars  : 10002      bytes : 13  bytes  : ~ 99.87%    :           10.50s                  
+100000    chars  : 100115     btyes : 149 bytes  : ~ 99.85%    :       15m 55.00s                  
+1000000   chars  :                  :            : ~ 99.99%    : 1d 4h 46m 5s                      
 10000000  chars  :                  : pending...
 997520891 chars  : 1000000000 bytes : pending...
 ```
