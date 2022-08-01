@@ -8,7 +8,7 @@ Informally: ∆ compression
 
 enwik9_char_size : uncompressed     : compressed : compression : run_time     : improvement
 -------------------------------------------------------------------------------------------
-10        chars  : 10         bytes : 19  bytes  : ~ - 89.99%   : 42.40µs      : N          
+10        chars  : 10         bytes : 19  bytes  : ~ - 89.99%  : 42.40µs      : N          
 100       chars  : 100        bytes : 21  bytes  : ~ 79.00%    : 1.26ms       : N          
 1000      chars  : 1000       bytes : 383 bytes  : ~ 61.70%    : 103.00ms     : N          
 10000     chars  : 10002      bytes : 13  bytes  : ~ 99.87%    : 10.50s       : Y          
