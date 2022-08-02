@@ -1,7 +1,13 @@
 # blink-hutter-prize
 A Hutter Prize submission using 'blink', our selective non-commutative ∆ (triangle) algebra
 
-## Performance
+## Performance - Rust
+
+```
+Pending...
+```
+
+## Performance - Python
 
 ```
 Informally: ∆ compression
