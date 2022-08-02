@@ -24,7 +24,11 @@ enwik9_char_size :   uncompressed   : compressed :   compression   :   run_time 
 997520891 chars  : 1000000000 bytes :      bytes :                 :              :            
 ```
 
-## Hardware
+## Geekbench5 Score
+
+https://browser.geekbench.com/v5/cpu/16402194
+
+## Hardware Snapshot
 ```
 $ neofetch
             .-/+oossssoo+/-.               hdyn@godel 
