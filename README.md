@@ -1,21 +1,30 @@
 # blink-hutter-prize
-A Hutter Prize submission using 'blink', a selective non-commutative ∆ (triangle) algebra
+A Hutter Prize submission using 'blink', our selective non-commutative ∆ (triangle) algebra
 
 ## Performance
 
 ```
 Informally: ∆ compression
 
-enwik9_char_size : uncompressed     : compressed : compression : run_time     : improvement
--------------------------------------------------------------------------------------------
-10        chars  : 10         bytes : 19  bytes  : ~ - 89.99%  : 42.40µs      : N          
-100       chars  : 100        bytes : 21  bytes  : ~ 79.00%    : 1.26ms       : N          
-1000      chars  : 1000       bytes : 383 bytes  : ~ 61.70%    : 103.00ms     : N          
-10000     chars  : 10002      bytes : 13  bytes  : ~ 99.87%    : 10.50s       : Y          
-100000    chars  : 100115     btyes : 149 bytes  : ~ 99.85%    : 15m 55s      : Y          
-1000000   chars  :                  :            : ~ 99.99%    : 1d 4h 46m 5s : Y          
-10000000  chars  :                  : pending...
-997520891 chars  : 1000000000 bytes : pending...
+enwik9_char_size : uncompressed     : compressed : compression     : run_time     : improvement
+-----------------------------------------------------------------------------------------------
+10        chars  : 10         bytes :      bytes :   70.00%        :    459.00 µs : N          
+100       chars  : 100        bytes :      bytes :   94.00%        :      4.92 ms : Y          
+1000      chars  : 1000       bytes :      bytes :   99.30%        :     53.80 ms : Y          
+10000     chars  : 10002      bytes :      bytes :   99.96%        :    436.00 ms : Y          
+100000    chars  : 100115     bytes :      bytes :   99.996%       :      4.41 s  : Y          
+1000000   chars  :            bytes :      bytes :   99.9995%      :     42.10 s  : Y          
+10000000  chars  :            bytes :      bytes :   99.99996%     :    7 m 15 s  : Y          
+100000000 chars  :            bytes :      bytes :                 :              :            
+200000000 chars  :            bytes :      bytes :                 :              :            
+300000000 chars  :            bytes :      bytes :                 :              :            
+400000000 chars  :            bytes :      bytes :                 :              :            
+500000000 chars  :            bytes :      bytes :                 :              :            
+600000000 chars  :            bytes :      bytes :                 :              :            
+700000000 chars  :            bytes :      bytes :                 :              :            
+800000000 chars  :            bytes :      bytes :                 :              :            
+900000000 chars  :            bytes :      bytes :                 :              :            
+997520891 chars  : 1000000000 bytes :      bytes :                 :              :            
 ```
 
 ## Hardware
