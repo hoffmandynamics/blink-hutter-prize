@@ -10,7 +10,7 @@ Testing...
 ## Performance - Python
 
 ```
-enwik9_char_size : uncompressed     : compressed : compression     : run_time     : improvement
+enwik9_char_size :   uncompressed   : compressed :   compression   :   run_time   : improvement
 -----------------------------------------------------------------------------------------------
 10        chars  : 10         bytes :      bytes :   70.00%        :    459.00 µs : N          
 100       chars  : 100        bytes :      bytes :   94.00%        :      4.92 ms : Y          
