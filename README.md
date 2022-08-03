@@ -4,27 +4,27 @@ A Hutter Prize submission using 'blink', our selective non-commutative ∆ (tria
 ## Performance - Rust
 
 ```
-enwik9_char_size :   uncompressed   : compressed :   compression   :      run_time     : improvement
-----------------------------------------------------------------------------------------------------
-10        chars  : 10         bytes :    6 bytes :   40.00%        :            0.21 s : N          
-----------------------------------------------------------------------------------------------------
+enwik9_char_size :   uncompressed   : compressed :   compression   :      run_time     : win
+--------------------------------------------------------------------------------------------
+10        chars  : 10         bytes :    6 bytes :   40.00%        :            0.21 s : N  
+--------------------------------------------------------------------------------------------
 ```
 
 ## Performance - Python
 
 ```
-enwik9_char_size :   uncompressed   : compressed :   compression   :      run_time     : improvement
-----------------------------------------------------------------------------------------------------
-10        chars  : 10         bytes :    6 bytes :   40.00%        :            7.25 s : N          
-100       chars  : 100        bytes :    6 bytes :   94.00%        :            7.14 s : Y          
-1000      chars  : 1000       bytes :    7 bytes :   99.30%        :            7.26 s : Y          
-10000     chars  : 10001      bytes :    4 bytes :   99.96%        :            7.75 s : Y          
-100000    chars  : 100148     bytes :    4 bytes :   99.996%       :           11.76 s : Y          
-1000000   chars  : 1004232    bytes :    5 bytes :   99.9995%      :           53.98 s : Y          
-10000000  chars  : 10048009   bytes :    4 bytes :   99.99996%     :       8 m 16.49 s : Y          
-100000000 chars  : 100379691  bytes :    4 bytes :   99.999996%    :  1 h 48 m 05.22 s : Y          
-500000000 chars  :            bytes :      bytes :                 :                   :            
-997520891 chars  : 1000000000 bytes :      bytes :                 :                   :            
+enwik9_char_size :   uncompressed   : compressed :   compression   :      run_time     : win
+--------------------------------------------------------------------------------------------
+10        chars  : 10         bytes :    6 bytes :   40.00%        :            7.25 s : N  
+100       chars  : 100        bytes :    6 bytes :   94.00%        :            7.14 s : Y  
+1000      chars  : 1000       bytes :    7 bytes :   99.30%        :            7.26 s : Y  
+10000     chars  : 10001      bytes :    4 bytes :   99.96%        :            7.75 s : Y  
+100000    chars  : 100148     bytes :    4 bytes :   99.996%       :           11.76 s : Y  
+1000000   chars  : 1004232    bytes :    5 bytes :   99.9995%      :           53.98 s : Y  
+10000000  chars  : 10048009   bytes :    4 bytes :   99.99996%     :       8 m 16.49 s : Y  
+100000000 chars  : 100379691  bytes :    4 bytes :   99.999996%    :  1 h 48 m 05.22 s : Y  
+500000000 chars  :            bytes :      bytes :                 :                   :    
+997520891 chars  : 1000000000 bytes :      bytes :                 :                   :    
 ```
 
 ## Geekbench5 Score
