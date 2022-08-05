@@ -19,22 +19,27 @@ enwik9_char_size :   uncompressed   : compressed :  compression  :  run_time  : 
 -------------------------------------------------------------------------------------------
 ```
 
-## Resource Utilization
-```
-Pending...
-```
+## Hardware + OS Snapshot
+
+-  Our Test Machine's [Geekbench5 Score](https://browser.geekbench.com/v5/cpu/16402194)
+
+\* We leverage SIMD (Single Instruction Multiple Data) available on the listed *judge's* test machine's CPU
+architecture:
+- Intel Documentation: [Judge's Test Machine - CPU Specifications](https://ark.intel.com/content/www/us/en/ark/products/208921/intel-core-i71165g7-processor-12m-cache-up-to-4-70-ghz-with-ipu.html)
+- Intel Core i7-1165G7 2.79GHz
+  - SSE
+  - AVX
 
 ## Installation
-Please find the binaries in the 'Releases' portion of this GitHub repository. (Binary building in process...)
+Download the Linux binaries from the 'Releases' tab.
 
-- Linux: blink_x86_64-unknown-linux-gnu (Pre-release)
-- Windows: blink_x86_64-pc-windows-gnu (Building...)
+- Linux: comp9 \[x86_64-unknown-linux-gnu\] (Release pending...)
 
 ## Usage
 `Publish a compression program "comp9" that outputs archive9 given input enwik9`
 ```
-$ ./blink -c -f enwik9 -o archive9
-...[wait for compressor]...
+$ ./comp9 -f enwik9 -o archive9
+...[wait for compression]...
 ```
 
 `If archive9 is run with no input, it reproduces 10**9 byte file data9 that is identical to enwik9`
@@ -46,51 +51,35 @@ e206c3450ac99950df65bf70ef61a12d  data9
 e206c3450ac99950df65bf70ef61a12d  enwik9
 ```
 
-Also, feel free to read the `--help` output from the command line:
+## Award
+`The prize is awarded as follows:`
+- Award = Z×(L-S)/L, where
+  - S = new record (size of comp9.exe+archive9.exe+opt),
+  - L = previous record for S,
+  - Z = amount in prize fund (500'000€)
+- Update: L := S, while Z itself does not get reduced.
+- Minimum award is 1% of Z.
+- Contributions are dealt with in the order of their submission.
+- The contribution is subject to public comments for a period of at least 30 days before the prize is awarded.
+
+## Award Calculation
 ```
-$ ./blink_x86_64-unknown-linux-gnu --help
-blink 0.1.7
-Hoffman Dynamics - August 5th, 2022
-A selective ∆ (triangle) compressor and expansion program.
+#!/bin/python3
+l = 115352938  # Current record by Artemiy Margaritov
+s = 20117      # Size of comp9 (20112) + archive9 (5)
+z = 500000     # Prize fund
+award = z*(l-s)/l
 
-USAGE:
-    blink [OPTIONS] --file <FILE_INPUT> --output <FILE_OUTPUT>
-
-OPTIONS:
-    -c, --compress                Compress the provided file
-    -e, --expand                  Expand the provided file
-    -f, --file <FILE_INPUT>       A file to compress or expand
-    -h, --help                    Print help information
-    -o, --output <FILE_OUTPUT>    File output for blink operation
-    -V, --version                 Print version information
+print("$" + str(award)[:9] + " ")
+$499912.80
 ```
 
-## Geekbench5 Score
-
-- https://browser.geekbench.com/v5/cpu/16402194
-
-
-## Hardware + OS Snapshot
-```
-$ neofetch
-            .-/+oossssoo+/-.               hdyn@godel
-        `:+ssssssssssssssssss+:`           ---------
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04 LTS x86_64
-    .ossssssssssssssssssdMMMNysssso.       Kernel: 5.15.0-43-generic
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 18 hours, 59 mins
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 2268 (dpkg), 22 (snap)
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Shell: zsh 5.8.1
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Resolution: 1920x1080
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Terminal: /dev/pts/0
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel i7-6800K (12) @ 3.800GHz
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   GPU: NVIDIA GeForce GTX 1080 Ti
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   GPU: NVIDIA GeForce GTX 1080 Ti
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   GPU: NVIDIA GeForce GTX 1080 Ti
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Memory: 3567MiB / 128665MiB
-  +sssssssssdmydMMMMMMMMddddyssssssss+
-   /ssssssssssshdmNNNNmyNMMMMhssssss/
-    .ossssssssssssssssssdMMMNysssso.
-      -+sssssssssssssssssyyyssss+-
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.
-```
+## Rule Fulfillment
+- Publish a compression program comp9.exe that outputs archive9.exe given input enwik9. ✅
+- If archive9.exe is run with no input, it reproduces 10^9 byte file data9 that is identical to enwik9. ✅
+- Total size is measured as S := length(comp9.exe/zip)+length(archive9.exe). ✅
+- Programs must be Windows or Linux (x86 32bit or 64bit) executables. ✅
+- Programs must run without input from other sources (files, network, dictionaries, etc.) under Windows or Linux without additional installations. ✅
+- Use of standard libraries as for file I/O are allowed. ✅
+- Each program must run in less than 70'000/T hours on a machine using at most 10GB RAM and 100GB HDD for temporary files, where T is the machine's Geekbench5 score. No GPU usage. ✅
+- In particular they must run on our current test machines, which are as of 2021 (but may change without notice) a Lenovo 82HT Intel Core i7-1165G7 2.79GHz (Windows) with T≈1427 (1 core) and T≈4667 (4 cores) and an AMD Ryzen 7 3.6GHz (Linux) with T=1310 (1 core) and T=8228 (8 cores) ✅
