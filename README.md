@@ -23,7 +23,7 @@ enwik9_char_size :   uncompressed   : compressed :  compression  :  run_time  : 
 
 -  Our Test Machine's [Geekbench5 Score](https://browser.geekbench.com/v5/cpu/16402194)
 
-- \* We leverage SIMD (Single Instruction Multiple Data) available on the listed *judge's* test machine's CPU
+- We leverage SIMD (Single Instruction Multiple Data) available on the listed *judge's* test machine's CPU
 architecture:
   - Intel Documentation: [Judge's Test Machine - CPU Specifications](https://ark.intel.com/content/www/us/en/ark/products/208921/intel-core-i71165g7-processor-12m-cache-up-to-4-70-ghz-with-ipu.html)
   - Intel Core i7-1165G7 2.79GHz
@@ -61,18 +61,6 @@ e206c3450ac99950df65bf70ef61a12d  enwik9
 - Minimum award is 1% of Z.
 - Contributions are dealt with in the order of their submission.
 - The contribution is subject to public comments for a period of at least 30 days before the prize is awarded.
-
-## Award Calculation
-```
-#!/bin/python3
-l = 115352938  # Current record by Artemiy Margaritov
-s = 20117      # Size of comp9 (20112) + archive9 (5)
-z = 500000     # Prize fund
-award = z*(l-s)/l
-
-print("$" + str(award)[:9] + " ")
-$499912.80
-```
 
 ## Rule Fulfillment
 - Publish a compression program comp9.exe that outputs archive9.exe given input enwik9. ✅
