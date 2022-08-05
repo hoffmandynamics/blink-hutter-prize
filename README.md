@@ -23,12 +23,12 @@ enwik9_char_size :   uncompressed   : compressed :  compression  :  run_time  : 
 
 -  Our Test Machine's [Geekbench5 Score](https://browser.geekbench.com/v5/cpu/16402194)
 
-\* We leverage SIMD (Single Instruction Multiple Data) available on the listed *judge's* test machine's CPU
+- \* We leverage SIMD (Single Instruction Multiple Data) available on the listed *judge's* test machine's CPU
 architecture:
-- Intel Documentation: [Judge's Test Machine - CPU Specifications](https://ark.intel.com/content/www/us/en/ark/products/208921/intel-core-i71165g7-processor-12m-cache-up-to-4-70-ghz-with-ipu.html)
-- Intel Core i7-1165G7 2.79GHz
-  - SSE
-  - AVX
+  - Intel Documentation: [Judge's Test Machine - CPU Specifications](https://ark.intel.com/content/www/us/en/ark/products/208921/intel-core-i71165g7-processor-12m-cache-up-to-4-70-ghz-with-ipu.html)
+  - Intel Core i7-1165G7 2.79GHz
+    - SSE
+    - AVX
 
 ## Installation
 Download the Linux binaries from the 'Releases' tab.
