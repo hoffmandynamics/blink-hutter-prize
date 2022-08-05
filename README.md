@@ -19,6 +19,52 @@ enwik9_char_size :   uncompressed   : compressed :  compression  :  run_time  : 
 -------------------------------------------------------------------------------------------
 ```
 
+## Resource Utilization
+```
+Pending...
+```
+
+## Installation
+Please find the binaries in the 'Releases' portion of this GitHub repository. (Binary building in process...)
+
+- Linux: blink_x86_64-unknown-linux-gnu (Pre-release)
+- Windows: blink_x86_64-pc-windows-gnu (Building...)
+
+## Usage
+`Publish a compression program "comp9" that outputs archive9 given input enwik9`
+```
+$ ./blink -c -f enwik9 -o archive9
+...[wait for compressor]...
+```
+
+`If archive9 is run with no input, it reproduces 10**9 byte file data9 that is identical to enwik9`
+```
+$ ./archive9
+...[wait for expansion]...
+$ md5sum data9 enwik9
+e206c3450ac99950df65bf70ef61a12d  data9
+e206c3450ac99950df65bf70ef61a12d  enwik9
+```
+
+Also, feel free to read the `--help` output from the command line:
+```
+$ ./blink_x86_64-unknown-linux-gnu --help
+blink 0.1.7
+Hoffman Dynamics - August 5th, 2022
+A selective ∆ (triangle) compressor and expansion program.
+
+USAGE:
+    blink [OPTIONS] --file <FILE_INPUT> --output <FILE_OUTPUT>
+
+OPTIONS:
+    -c, --compress                Compress the provided file
+    -e, --expand                  Expand the provided file
+    -f, --file <FILE_INPUT>       A file to compress or expand
+    -h, --help                    Print help information
+    -o, --output <FILE_OUTPUT>    File output for blink operation
+    -V, --version                 Print version information
+```
+
 ## Geekbench5 Score
 
 - https://browser.geekbench.com/v5/cpu/16402194
