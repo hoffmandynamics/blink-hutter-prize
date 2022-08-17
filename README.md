@@ -133,7 +133,7 @@ Total chars  : 997520890
 Unique chars : 10800
 ```
 
-Blink ingested bytes:
+Blink ingested utf-8 characters:
 ```
 Total chars  : 2660055440
 Unique chars : 4
