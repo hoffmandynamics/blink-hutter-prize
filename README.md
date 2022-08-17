@@ -98,11 +98,8 @@ choice, other than the author's delight over Rust's precise
 
 ## Hardware + OS Snapshot
 
--  Our Test Machine's [Geekbench5 Score](https://browser.geekbench.com/v5/cpu/16402194)
-
-- SIMD (Single Instruction Multiple Data) available on the listed judge's CPU:
-  - https://browser.geekbench.com/user/280257
-    - https://browser.geekbench.com/v5/cpu/15864122
+- Our [Geekbench5 score](https://browser.geekbench.com/v5/cpu/16402194)
+- Judge's [Geekbench5 score](https://browser.geekbench.com/v5/cpu/15864122)
 
 ## Installation
 Download the Linux binaries from the 'Releases' tab.
