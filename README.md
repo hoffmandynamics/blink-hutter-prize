@@ -1,30 +1,6 @@
 # blink-hutter-prize
 A Hutter Prize submission using 'blink', our selective non-commutative ∆ (triangle) algebra
 
-## Description
-Blink compresses and expands in four distinct phases:<br/>
-
-Compression | ∆ (triangle)
-- Ingest
-- ∆
-- ∆ Encode
-- ∆ Decode
-
-Expansion | -∆ (inverse triangle)
-- Egest
-- -∆ Decode
-- -∆ Encode
-- -∆
-
-The resultant compressed output is defined in this way: 
-<br/>
-`<∆ iterations><character_delimiter><final_output_from_last_triangle_iteration_in_triangle_syntax>`
-<br/>
-
-The `<character_delimiter>` is, at this time, always provided as the `&` char. There is no particular reason for this
-choice, other than the author's delight over Rust's precise
-[borrow syntax](https://doc.rust-lang.org/rust-by-example/scope/borrow.html).
-
 ## Performance
 
 ```
@@ -42,6 +18,21 @@ enwik9_char_size :   uncompressed   : compressed :  compression  :  run_time  : 
 997520890 chars  : 1000000000 bytes :    5 bytes :  99.9999996%  :  1660.48 s : Y          
 -------------------------------------------------------------------------------------------
 ```
+
+## Description
+Blink compresses and expands in four distinct phases:<br/>
+
+Compression | ∆ (triangle)
+- Ingest
+- ∆
+- ∆ Encode
+- ∆ Decode
+
+Expansion | -∆ (inverse triangle)
+- Egest
+- -∆ Decode
+- -∆ Encode
+- -∆
 
 ## Algorithm Explanation
 (python as pseudo-code)
@@ -95,6 +86,15 @@ ij
 with open("archive9", "wb") as f:
     f.write(b"2&01")
 ```
+
+The resultant compressed output is defined in this way: 
+<br/>
+`<∆ iterations><character_delimiter><final_output_from_last_triangle_iteration_in_triangle_syntax>`
+<br/>
+
+The `<character_delimiter>` is, at this time, always provided as the `&` char. There is no particular reason for this
+choice, other than the author's delight over Rust's precise
+[borrow syntax](https://doc.rust-lang.org/rust-by-example/scope/borrow.html).
 
 ## Hardware + OS Snapshot
 
